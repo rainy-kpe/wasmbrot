@@ -12,9 +12,17 @@ module.exports = env => ({
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      },
+      {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: /node_modules/
+      },
+      {
+        test: /\.wasm$/,
+        type: "webassembly/experimental"
       }
     ]
   },
