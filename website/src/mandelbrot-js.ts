@@ -1,14 +1,3 @@
-const colour = (iteration: number, offset: number, scale: number) => {
-  iteration = ((iteration * scale) + offset) % 1024;
-  if (iteration < 256) {
-    return iteration;
-  } else if (iteration < 512) {
-    return 255 - (iteration - 255);
-  } else {
-    return 0;
-  }
-}
-
 const iterateEquation = (x0: number, y0: number, max_iter: number) => {
   let a = 0, b = 0, rx = 0, ry = 0;
   let iterations = 0;

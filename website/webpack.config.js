@@ -32,4 +32,8 @@ module.exports = env => ({
   plugins: [
     new CopyWebpackPlugin([{ from: "public/*", flatten: true }])
   ],
+  externals: [
+    "child_process",
+    "worker_threads"
+  ]
 });
