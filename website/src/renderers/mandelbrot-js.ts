@@ -1,3 +1,5 @@
+import { RendererOptions } from "../components/RenderView/RenderView";
+
 const iterateEquation = (x0: number, y0: number, max_iter: number) => {
   let a = 0, b = 0, rx = 0, ry = 0;
   let iterations = 0;
@@ -11,7 +13,9 @@ const iterateEquation = (x0: number, y0: number, max_iter: number) => {
   return iterations;
 }
 
-export function render(context: CanvasRenderingContext2D, w: number, h: number, re1: number, re2: number, img1: number, img2: number, max_iter: number) {
+export async function render(context: CanvasRenderingContext2D, options: RendererOptions) {
+  const { w, h, re1, re2, img1, img2, max_iter } = options;
+
   const imgData = context.createImageData(w, h);
 
   const x_step = (re2 - re1) / w;

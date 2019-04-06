@@ -1,6 +1,9 @@
+import { RendererOptions } from "../components/RenderView/RenderView";
 import { getMemory, Universe } from "wasm-mandelbrot";
 
-export const render = (context: CanvasRenderingContext2D, w: number, h: number, re1: number, re2: number, img1: number, img2: number, max_iter: number) => {
+export async function render(context: CanvasRenderingContext2D, options: RendererOptions) {
+  const { w, h, re1, re2, img1, img2, max_iter } = options;
+
   const universe = Universe.new(w, h);
   universe.render(re1, re2, img1, img2, max_iter);
   

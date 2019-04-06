@@ -4,16 +4,21 @@
   "description": "Website for the wasmbrot",
   "main": "index.js",
   "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "semantic-ui-react": "^0.86.0",
     "wasm-mandelbrot": "link:../wasm-mandelbrot/pkg",
     "workerpool": "^3.1.2"
   },
   "devDependencies": {
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
     "@types/workerpool": "^2.3.0",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.1",
     "style-loader": "^0.23.1",
     "ts-loader": "^5.3.3",
-    "typescript": "^3.3.4000",
+    "typescript": "^3.4.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"

@@ -1,7 +1,8 @@
+/*
 import "./index.css";
 import { render as wasmRender } from "./mandelbrot-wasm";
-import { render as jsRender } from "./mandelbrot-js";
-import { render as jsRenderWorker } from "./mandelbrot-worker";
+import { render as jsRender } from "./renderers/mandelbrot-js";
+import { render as jsRenderWorker } from "./renderers/mandelbrot-worker";
 
 const w = 500;
 const h = 500;
@@ -70,3 +71,4 @@ const renderLoop = () => {
 };
 
 renderLoop();
+*/

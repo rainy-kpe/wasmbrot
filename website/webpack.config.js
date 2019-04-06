@@ -1,5 +1,6 @@
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
+// entry: "./src/index.tsx",
 
 module.exports = env => ({
   entry: "./src/bootstrap.js",
