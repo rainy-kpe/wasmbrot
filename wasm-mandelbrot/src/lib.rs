@@ -26,6 +26,13 @@ struct MandelConfig {
 }
 
 #[wasm_bindgen]
+extern "C" {
+    #[wasm_bindgen(js_namespace = console)]
+    fn log(s: &str);
+}
+
+
+#[wasm_bindgen]
 pub struct Universe {
     width: u32,
     height: u32,
@@ -56,6 +63,8 @@ impl Universe {
     }
 
     pub fn render(&mut self, re1: f64, re2: f64, img1: f64, img2: f64, max_iter: u32) {
+        log("Rendering...");
+
         let config = MandelConfig {
             re1: re1,
             re2: re2,

@@ -83,8 +83,6 @@ export default class MainApp extends React.Component<MainAppProps, MainAppState>
   }
 
   private onClick(re: number, img: number) {
-    console.log(re, img);
-
     const { re1, re2, img1, img2, w, h} = this.state.options; 
     const c = { re: (re2 - re1) / 2, img: (img2 - img1) / 2 };
     this.setState({options: {
